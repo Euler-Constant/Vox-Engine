@@ -50,9 +50,9 @@ int main(int argc, char *argv[])
     // Future: grid pixels
     SDL_RenderPresent(renderer);
 
-    SDL_DestroyRenderer(Renderer);
-    SDL_DestroyWindow(Window);
-    SDL_QUIT();
-    return 0;
+    // SDL_DestroyRenderer(renderer);
+    // SDL_DestroyWindow(window);
+    // SDL_Quit();
+    // return 0;
   };
 };
