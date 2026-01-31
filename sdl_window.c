@@ -30,5 +30,24 @@ int int main(int argc, char *argv[])
     SDL_Quit();
     return 1;
   };
+
+  int running = 1; 
+  while (running) {
+    SDL_Event event;  // Container for inputs
+    while (SDL_PollEvent(&event)) {
+        if (event.type == SDL_QUIT) {
+            running = 0;  // X button or Alt+F4
+        };
+    };
+
+    // Future: sim update (world_update())
+
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);  // Black
+    SDL_RenderClear(renderer);                       // nuke canvas
+
+    // Future: grid pixels
+
+    SDL_RenderPresent(renderer);
+  };
 };
 
