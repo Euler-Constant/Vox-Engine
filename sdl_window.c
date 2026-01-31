@@ -48,8 +48,11 @@ int main(int argc, char *argv[])
     SDL_RenderClear(renderer);                       // nuke canvas
 
     // Future: grid pixels
-
     SDL_RenderPresent(renderer);
+
+    SDL_DestroyRenderer(Renderer);
+    SDL_DestroyWindow(Window);
+    SDL_QUIT();
+    return 0;
   };
 };
-
