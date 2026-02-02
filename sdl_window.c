@@ -35,16 +35,17 @@ int main(int argc, char *argv[])
 
   int running = 1; 
   while (running) {
-    SDL_Event event;  // Container for inputs
+    SDL_Event event;  // Container for events
     while (SDL_PollEvent(&event)) {
         if (event.type == SDL_QUIT) {
-            running = 0;  // X button or Alt+F4
+            running = 0;  // X button
         };
     };
 
-    // Future: sim update (world_update())
+    // world_update();
+    // Append later: sim update (world_update())
 
-    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);  // Black
+    SDL_SetRenderDrawColor(renderer, 0, 0, 5, 255);  // Black
     SDL_RenderClear(renderer);                       // nuke canvas
 
     // Future: grid pixels
