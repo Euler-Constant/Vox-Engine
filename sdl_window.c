@@ -4,7 +4,7 @@
 int main(int argc, char *argv[])
 {
 
-  if((SDL_Init(SDL_INIT_VIDEO|SDL_INIT_AUDIO)==-1)) 
+  if((SDL_Init(SDL_INIT_VIDEO|SDL_INIT_AUDIO) == -1)) 
   { 
     printf("Could not initialize SDL: %s.\n", SDL_GetError());
     exit(-1);
@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
   };
 
   int running = 1; 
+
   while (running) {
     SDL_Event event;  // Container for events
     while (SDL_PollEvent(&event)) {
@@ -50,19 +51,12 @@ int main(int argc, char *argv[])
 
     // Future: grid pixels
     SDL_RenderPresent(renderer);
-
-    // SDL_DestroyRenderer(renderer);
-    // SDL_DestroyWindow(window);
-    // SDL_Quit();
-    // return 0;
   };
+
   SDL_DestroyRenderer(renderer);
   SDL_DestroyWindow(window);
   SDL_Quit();
   return 0;
+
 };
 
-// SDL_DestroyRenderer(renderer);
-// SDL_DestroyWindow(window);
-// SDL_Quit();
-// :return 0;
