@@ -1,5 +1,9 @@
 #define CHUNK_SIZE 64
 
+// includes
+#include <pthread.h>
+
+
 typedef struct {
     int x, y;          // grid position (top-left)
     int dirty_min_x, dirty_min_y, dirty_max_x, dirty_max_y;  // Local coords, init to 0,CHUNK_SIZE-1 if full
